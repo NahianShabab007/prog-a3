@@ -1,0 +1,17 @@
+{
+  "name": "charity-a2",
+  "version": "1.0.0",
+  "description": "PROG2002 A2 - Charity Events website (Node + MySQL + Vanilla JS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.15.2"
+  }
+}

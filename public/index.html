@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Home</title>
+</head>
+<body>
+  <div id="top"></div>
+  <main class="container">
+    <h1>Upcoming Events</h1>
+
+    <!-- ⭐ Event Highlights (Top 3 Upcoming) -->
+    <section style="margin-bottom:16px">
+      <h2>Event Highlights (Top 3 Upcoming)</h2>
+      <ul id="highlights"></ul>
+    </section>
+
+    <div id="events" class="grid"></div>
+
+    <label class="row" style="margin-top:16px">
+      <input type="checkbox" id="togglePast" />
+      <span>Show past events</span>
+    </label>
+    <h2 id="pastTitle" style="display:none">Past Events</h2>
+    <div id="past" class="grid"></div>
+  </main>
+  
+  <script type="module" src="/js/home.js"></script>
+</body>
+</html>

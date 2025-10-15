@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Admin · Edit Event</title>
+</head>
+<body>
+  <div id="top"></div>
+  <main class="container">
+    <h1 id="title">Create Event</h1>
+    <div id="msg"></div>
+
+    <form id="f" class="form" style="max-width:720px">
+      <label>Title<input name="title" required></label>
+      <label>Description<textarea name="description"></textarea></label>
+      <label>Image URL<input name="image_url"></label>
+      <div class="row">
+        <label style="flex:1">City<input name="location_city"></label>
+        <label style="flex:1">Venue<input name="location_venue"></label>
+      </div>
+      <div class="row">
+        <label style="flex:1">Start (YYYY-MM-DD HH:MM:SS)<input name="start_datetime" required placeholder="2025-10-10 10:00:00"></label>
+        <label style="flex:1">End (YYYY-MM-DD HH:MM:SS)<input name="end_datetime" required placeholder="2025-10-10 12:00:00"></label>
+      </div>
+      <div class="row">
+        <label style="flex:1">Is Free?
+          <select name="is_free">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+        <label style="flex:1">Price (cents)<input type="number" name="price_cents" min="0" value="0"></label>
+      </div>
+      <div class="row">
+        <label style="flex:1">Goal (cents)<input type="number" name="goal_amount_cents" min="0" value="0"></label>
+        <label style="flex:1">Raised (cents)<input type="number" name="raised_amount_cents" min="0" value="0"></label>
+      </div>
+      <div class="row">
+        <label style="flex:1">Status
+          <select name="status">
+            <option value="active">active</option>
+            <option value="suspended">suspended</option>
+          </select>
+        </label>
+        <label style="flex:1">Organisation ID<input type="number" name="org_id" required></label>
+        <label style="flex:1">Category ID<input type="number" name="category_id" required></label>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn-primary" type="submit">Save</button>
+        <a class="btn" href="/admin/index.html">Back</a>
+      </div>
+    </form>
+
+    <hr style="margin:20px 0;border-color:#1e2a42">
+    <h2>Registrations (read-only)</h2>
+    <div id="regs" class="muted">No data.</div>
+  </main>
+  <script type="module" src="/admin/edit.js"></script>
+</body>
+</html>

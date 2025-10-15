@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Admin · Events</title>
+</head>
+<body>
+  <div id="top"></div>
+  <main class="container">
+    <h1>Admin — Events</h1>
+    <p><a class="btn-primary" href="/admin/edit.html">Create New Event</a></p>
+
+    <div id="msg"></div>
+    <section>
+      <h2>Upcoming</h2>
+      <div id="upcoming" class="grid"></div>
+    </section>
+
+    <section style="margin-top:16px">
+      <h2>Past</h2>
+      <div id="past" class="grid"></div>
+    </section>
+  </main>
+  <script type="module" src="/admin/admin.js"></script>
+</body>
+</html>
